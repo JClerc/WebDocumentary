@@ -49,3 +49,15 @@ $('.next').on('click', function () {
         $('.steps .step').eq(next.index()).addClass('active');
     }
 });
+
+$('.card').on('click', function () {
+    var page = $(this).closest('.page');
+    var note = page.find('.note');
+    note.find('.title').text( $(this).find('.title').text() );
+    note.find('.content').empty().append( $(this).find('.content').clone() );
+    page.addClass('with-note');
+});
+
+$('.mask').on('click', function () {
+   $(this).closest('.page').removeClass('with-note');
+});
