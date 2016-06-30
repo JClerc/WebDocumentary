@@ -2,6 +2,14 @@
 $('.steps').empty();
 var max = $('.frames .frame').length;
 
+var updateButton = function () {
+    if ($('.steps .step:last').hasClass('active')) {
+        $('.next').text('Fini !');
+    } else {
+        $('.next').text('Continuer');
+    }
+};
+
 /*jshint loopfunc: true */
 for (var i = 1; i <= max; i++) {
     $('.steps').append(
@@ -15,6 +23,7 @@ for (var i = 1; i <= max; i++) {
                         $('.frame-' + k).removeClass('leaving').addClass('coming');
                         parent.addClass('active');
                     }
+                    updateButton();
                 });
                 return btn;
             })(
@@ -39,6 +48,7 @@ $('.home').on('click', function () {
     $(document.body).addClass('is-home');
 });
 
+
 $('.next').on('click', function () {
     var current = $('.frame.coming');
     var next = current.next();
@@ -48,6 +58,7 @@ $('.next').on('click', function () {
         $('.steps .step.active').removeClass('active');
         $('.steps .step').eq(next.index()).addClass('active');
     }
+    updateButton();
 });
 
 $('.card').on('click', function () {
