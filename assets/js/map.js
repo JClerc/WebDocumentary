@@ -1,18 +1,7 @@
 
 $(window).on('load', function () {
 
-      
-    $('.map').each(function (i, elem) {
-      var $elem = $(elem);
-      $elem.css({
-        width: $elem.width(),
-        height: $elem.height()
-      });
-      console.log($elem.width(), $elem.height());
-    });
-
-
-  function initMap() {
+  maps['map-medellin-left'] = function () {
     var QG = {lat:  5.8863, lng: -74.6425};
     var barrio = {lat: 6.1866031, lng: -75.5929752};
     var hopital = {lat: 6.2150977, lng: -75.5715678};
@@ -27,6 +16,7 @@ $(window).on('load', function () {
       scrollwheel: false,
       zoom: 10
     }); 
+
     // Create a marker and set its position.
     var marker1 = new google.maps.Marker({
       map: map,
@@ -49,10 +39,10 @@ $(window).on('load', function () {
       position: stade,
       title: 'Stade'
     });
-  }
+  };
 
   //map pour le côté méchant, Medellin
-  function initMap2(){
+  maps['map-medellin-right'] = function () {
 
     var explosion = {lat:  4.5754006, lng: -74.2136921};
     var assassinats = {lat:  6.2549791, lng: -75.5518103};
@@ -89,10 +79,10 @@ $(window).on('load', function () {
         title: 'Meurtre de Tulio Manuel Castro Gil'
       });
 
-  }
+  };
 
   //carte traffic de drogues
-  function initMap3(){
+  maps['map-world'] = function () {
 
     var medellin = {lat:  6.268844, lng: -75.6664325};
     var normanscay = {lat:  24.618841, lng: -76.828809};
@@ -121,13 +111,22 @@ $(window).on('load', function () {
         position: miami,
         title: 'Miami'
       });
-  }
+  };
 
-  setTimeout(function () {
-    initMap();
-    initMap2();
-    initMap3();    
-  }, 50);
+  // $('.map').each(function (i, elem) {
+  //   var $elem = $(elem);
+  //   $elem.css({
+  //     width: window.innerWidth,
+  //     height: window.innerHeight
+  //   });
+  //   console.log($elem.width(), $elem.height());
+  // });
+
+  // setTimeout(function () {
+  //   initMap();
+  //   initMap2();
+  //   initMap3();
+  // }, 5);
 
 });
 
