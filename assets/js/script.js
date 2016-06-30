@@ -70,7 +70,7 @@ $('.next').on('click', function () {
 });
 
 $('.card').on('click', function () {
-    var page = $(this).closest('.page');
+    var page = $(this).closest('.frame');
     var note = page.find('.note');
     note.find('.title').text( $(this).find('.title').text() );
     note.find('.content').empty().append( $(this).find('.content').clone() );
@@ -78,5 +78,5 @@ $('.card').on('click', function () {
 });
 
 $('.mask').on('click', function () {
-   $(this).closest('.page').removeClass('with-note');
+   $(this).closest('.frame').removeClass('with-note');
 });
