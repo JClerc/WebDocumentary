@@ -3,6 +3,9 @@ $('.steps').empty();
 var max = $('.frames .frame').length;
 var maps = {};
 
+$('audio').get(0).volume = 0.1;
+$('audio').get(0).play();
+
 var update = function () {
     if ($('.steps .step:last').hasClass('active')) {
         $('.next').text('Fini !');
