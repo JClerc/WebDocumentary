@@ -538,3 +538,9 @@ audio {
     background-image: url('../img/pages/8/right.jpg');
 }
 
+
+@media screen and (max-width: 640px)  {    
+    .navigation .steps {
+        display: none;
+    }
+}
