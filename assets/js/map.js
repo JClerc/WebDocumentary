@@ -187,10 +187,10 @@ $(window).on('load', function () {
       '</div>'+
       '<h1 id="firstHeading" class="firstHeading">Meurtre de Rodrigo Lara Bonilla</h1>'+
       '<div id="bodyContent">'+
-      'Son action a été caractérisée par la poursuite des trafiquants du Cartel de Medellín dirigé par Pablo Escobar. En 1984, il est tué à Bogota par des hommes d\'Escobar lors de son transport vers l\'aéroport 
-      pour prendre un avion à destination de Prague où il devait assurer ses nouvelles fonctions 
-      d\'ambassadeur de Colombie. Sa mort marque le début d\'une guerre entre l\'État et les trafiquants
-       de drogue, qui se prolongera pendant plus d\'une décennie' +
+      'Son action a été caractérisée par la poursuite des trafiquants du Cartel de Medellín dirigé par Pablo Escobar. En 1984, il est tué à Bogota par des hommes d\'Escobar lors de son transport vers l\'aéroport'+ 
+      'pour prendre un avion à destination de Prague où il devait assurer ses nouvelles fonctions'+ 
+      'd\'ambassadeur de Colombie. Sa mort marque le début d\'une guerre entre l\'État et les trafiquants'+
+       'de drogue, qui se prolongera pendant plus d\'une décennie' +
       '</div>'+
       '</div>';
 
