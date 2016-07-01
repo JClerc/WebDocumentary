@@ -53,6 +53,11 @@ h3 {
     background-image: url('../img/pablo.jpg');
 }
 
+.homepage video.mask-2 {
+    object-fit: cover;
+    width: 100%;
+}
+
 .homepage .btn-primary {
     margin-top: 20px;
 }
